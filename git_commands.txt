@@ -1,0 +1,84 @@
+git useful commands
+============================================================
+
+get name of current branch-
+git branch
+
+switch to branch-
+git checkout Software_docs
+
+add-
+git add filename or foldername
+
+commit-
+git commit -m "commit message"
+
+push-
+git push -u origin POC's
+
+delete-
+git branch -d branchname
+
+pull-
+git pull origin POC's
+
+# Merge local branch foo into local branch master,
+# without having to checkout master first.
+# Here `.` means to use the local repository as the "remote":
+git fetch . foo:master
+
+# Merge remote branch origin/foo into local branch foo,
+# without having to checkout foo first:
+git fetch origin foo:foo
+
+<<<<<<< HEAD
+
+=======
+Reset-
+git reset --merge
+
+Shows names and URLs of remotes
+git remote   git remote -v
+
+Destroy history blindfolded
+git rebase    git rebase -i	
+Lets you rewrite the upstream history of a branch, choosing which commits to keep, squash, or ditch.
+
+
+git reset foo	Unstages files	
+git reset –hard
+git reset –soft		Discards local modifications
+			Returns to another commit, but doesn’t touch working directory.
+
+Stores modifications to tracked files, then rolls them back
+git stash        git stash -u	Also does the same to untracked files
+>>>>>>> 3e0a44b2f835ab68b684af533c9ecce1ac0e426c
+
+
+git auto merge-
+git commit -am "your message"
+
+
+==to delete folder from remote branch
+git status
+
+git add --all
+
+git commit -a
+
+git push -u origin <branch>
+
+git filter-branch -f --index-filter "git rm -rf --cached --ignore-unmatch <foldername to remove>" -- --all
+
+git filter-branch -f --index-filter "git rm -rf --cached --ignore-unmatch FarmeasyUI" -- --all
+
+git filter-branch -f --index-filter "git rm -rf --cached --ignore-unmatch farmease" -- --all
+
+git reflog expire --expire=now --all
+
+git gc --prune=now
+
+git gc --aggressive --prune=now
+
+git push --all --force
+====
