@@ -81,4 +81,6 @@ git gc --prune=now
 git gc --aggressive --prune=now
 
 git push --all --force
+
+git remove->   git rm -r <foldername>
 ====
