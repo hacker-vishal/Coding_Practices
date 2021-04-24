@@ -1,0 +1,15 @@
+﻿@using WebAppDac.Models
+@model IEnumerable<Person>
+
+@{
+    ViewBag.Title = "lsppl";
+}
+
+<h2>lsppl</h2>
+
+    @foreach (var item in Model)
+    {
+        <div style="float:left;margin:10px;clear:right">
+            @Html.DisplayFor(x => item)
+        </div>
+    }

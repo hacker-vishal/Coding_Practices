@@ -1,0 +1,40 @@
+﻿@model WebAppWithSagar.Models.People 
+
+@{
+    ViewBag.Title = "RemovePerson";
+}
+
+<h2>RemovePerson</h2>
+
+@using (Html.BeginForm())
+{
+    <div style="float:left;margin:10px;clear:right">
+        Enter ID to remove : @Html.TextBoxFor(x => x.Id)
+    </div>
+    <input type="submit" value="Delete" style="float:left;clear:both" />
+}
+
+@section ScriptHeader{
+    <link href="~/Content/Site.css" rel="stylesheet" type="text/css" />
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <script src="~/Scripts/modernizr-2.8.3.js"></script>
+}
+
+@section ScriptFooter{
+    <script src="~/Scripts/jquery-3.4.1.min.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+    <script src="~/Scripts/jquery.unobtrusive-ajax.min.js"></script>
+}
+
+@section Menu{
+    <h3>Menu</h3>
+    @Html.ActionLink("Get all records", "GetPeople")
+    <br />
+    @Html.ActionLink("Search a record", "SearchPeople")
+    <br />
+    @Html.ActionLink("Add a record", "AddPerson")
+    <br />
+    @Html.ActionLink("Update a record", "ChangePersonInfo")
+    <br />
+    @Html.ActionLink("Remove a record", "RemovePerson")
+}

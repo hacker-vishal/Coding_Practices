@@ -1,0 +1,16 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>DB work</h2>
+
+<h2>Hello Guys <span style="color:green">@ViewBag.Getppl</span></h2>
+<ul>
+    @{
+        foreach (var item in ViewBag.Getppl)
+        {
+            <li>@item.ID  @item.Name  @item.Job</li>
+        }
+    }
+</ul>
